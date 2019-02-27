@@ -1,6 +1,6 @@
 package com.zipcodewilmington.assessment2.part2;
 
-import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.Set;
 
@@ -43,6 +43,6 @@ public class Router {
         for(String key : keys) {
             string = (key + " -> " + pathControllerMap.get(key) + "\n") + string;
         }
-        return string.toString();
+        return string;
     }
 }

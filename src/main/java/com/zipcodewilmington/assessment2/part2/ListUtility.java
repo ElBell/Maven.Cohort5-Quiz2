@@ -1,12 +1,9 @@
 package com.zipcodewilmington.assessment2.part2;
 
-import com.j256.ormlite.stmt.query.In;
-import com.sun.tools.javac.util.ArrayUtils;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class ListUtility {
     private List<Integer> currentList = new ArrayList<>();
