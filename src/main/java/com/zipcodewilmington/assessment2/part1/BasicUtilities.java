@@ -14,7 +14,6 @@ public class BasicUtilities {
     }
 
     public Boolean startsWith(String string, Character character) {
-        String otherVersion = string.toLowerCase();
-        return string.indexOf(character) == 0 || otherVersion.indexOf(character) == 0;
+        return string.indexOf(character) == 0 || string.toLowerCase().indexOf(character) == 0;
     }
 }

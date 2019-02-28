@@ -6,10 +6,11 @@ import java.util.Collections;
 import java.util.List;
 
 public class ArrayUtility {
+
     public Integer[] merge(Integer[] array1, Integer[] array2) {
         List<Integer> answer = new ArrayList<>(Arrays.asList(array1));
         answer.addAll(Arrays.asList(array2));
-        return answer.toArray(new Integer[answer.size()]);
+        return answer.toArray(new Integer[0]);
     }
 
     public Integer[] rotate(Integer[] array, Integer index) {
@@ -25,15 +26,7 @@ public class ArrayUtility {
     }
 
     public Integer mostCommon(Integer[] array) {
-        Integer mostCommon = array[0];
-        Integer mostCommonCount = 0;
-        for (Integer integer : array) {
-            int occurrences = countOccurrence(array, integer);
-            if (occurrences > mostCommonCount) {
-                mostCommon = integer;
-                mostCommonCount = occurrences;
-            }
-        }
-        return mostCommon;
+        Arrays.sort(array, (a, b) -> countOccurrence(array, a) - countOccurrence(array, b));
+        return array[array.length - 1];
     }
 }

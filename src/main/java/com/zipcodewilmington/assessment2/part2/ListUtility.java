@@ -21,12 +21,13 @@ public class ListUtility {
     }
 
     public String join() {
-        return currentList.toString().substring(1, currentList.toString().length()-1);
-    }
+        String stringValue = currentList.toString();
+        return stringValue.substring(1, stringValue.length()-1); }
+
 
     public Integer mostCommon() {
         ArrayUtility arrayUtility = new ArrayUtility();
-        return arrayUtility.mostCommon(currentList.toArray(new Integer[currentList.size()]));
+        return arrayUtility.mostCommon(currentList.toArray(new Integer[0]));
     }
 
     public Boolean contains(Integer valueToAdd) {
